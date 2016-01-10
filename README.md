@@ -1,4 +1,4 @@
-# OWIN Microservice
+# Dotnet Microservice
 
 A library containing a small set of classes for adding actuator style endpoints to either an ASP.NET 5 application or an OWIN application hosted under either IIS or Self-hosted
 
