@@ -8,6 +8,9 @@ Code is licensed under the ISC license to use as you wish.
 
 Run the following from the package manager console to install the package
 
+NOTE: The pre-release (-pre) flag is currently required for Non-DNX projects as the core Dotnet.Microservice package pulls in Microsoft.Extensions.Configuration which is 
+still an RC so without the pre-release flag you will get a dependency resolution failure for Microsoft.Extensions.Configuration.
+
 ### ASP.NET 5
 
 ```
@@ -17,7 +20,7 @@ PM> Install-Package Dotnet.Microservice.Dnx
 ### For OWIN
 
 ```
-PM> Install-Package Dotnet.Microservice.Owin
+PM> Install-Package Dotnet.Microservice.Owin -pre
 ```
 
 ## Documentation
