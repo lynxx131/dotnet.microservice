@@ -20,6 +20,11 @@ namespace Dotnet.Microservice
         /// </summary>
         public static void AddConfigurationObject(IConfiguration configuration, string sourceName)
         {
+            if (Sources.ContainsKey(sourceName))
+            {
+                throw new InvalidOperationException($"There is already a configuration source registered with the name {sourceName}");
+            }
+
             Sources.Add(sourceName, configuration);
         }
 
@@ -29,6 +34,11 @@ namespace Dotnet.Microservice
         /// </summary>
         public static void RemoveConfigurationObject(string sourceName)
         {
+            if (!Sources.ContainsKey(sourceName))
+            {
+                throw new InvalidOperationException($"There is no configuration source registered with the name {sourceName}");
+            }
+
             Sources.Remove(sourceName);
         }
 
@@ -39,6 +49,11 @@ namespace Dotnet.Microservice
         /// </summary>
         public static string Get(string sourceName, string key)
         {
+            if (!Sources.ContainsKey(sourceName))
+            {
+                throw new InvalidOperationException($"There is no configuration source registered with the name {sourceName}");
+            }
+
             return Sources[sourceName].GetSection(key).Value;
         }
 
@@ -50,6 +65,11 @@ namespace Dotnet.Microservice
         /// </summary>
         public static void Set(string sourceName, string key, string value)
         {
+            if (!Sources.ContainsKey(sourceName))
+            {
+                throw new InvalidOperationException($"There is no configuration source registered with the name {sourceName}");
+            }
+
             Sources[sourceName].GetSection(key).Value = value;
         }
         
