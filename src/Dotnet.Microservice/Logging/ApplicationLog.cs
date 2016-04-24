@@ -63,6 +63,15 @@ namespace Dotnet.Microservice.Logging
         }
 
         /// <summary>
+        /// Adds a customer provider to providers list
+        /// </summary>
+        /// <param name="provider">An instance of a class that implements <see cref="IApplicationLogProvider"/></param>
+        public static void AddProvider(IApplicationLogProvider provider)
+        {
+            Providers.Add(provider);
+        }
+
+        /// <summary>
         /// Format a log message and return it as a string
         /// <param name="logLevel">Log level of the message</param>
         /// <param name="message">The log message to format</param>
