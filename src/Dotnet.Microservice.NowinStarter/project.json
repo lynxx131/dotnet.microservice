@@ -1,0 +1,21 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Dotnet.Microservice.NowinStarter Class Library",
+  "authors": [ "Lynx" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Nowin": "0.22.2",
+    "Owin.Routing": "0.8.0",
+    "Dotnet.Microservice": ""
+  },
+  
+  "frameworks": {
+    "net451": { },
+    "dnx451": { },
+    "net46": { },
+    "dnx46": { }
+  }
+}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
+using System.Runtime.InteropServices;
 
 #if DNXCORE50
 using System.Runtime.InteropServices;
@@ -38,9 +39,9 @@ namespace Dotnet.Microservice
             env.ProcessStartTime = Process.GetCurrentProcess().StartTime;
             env.Hostname = Dns.GetHostName();
 
-#if DNXCORE50
+#if NETCOREAPP1_0
             // Allow OS detection on .NET Core
-            if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
                 env.Os = "Linux";
             }
@@ -104,7 +105,7 @@ namespace Dotnet.Microservice
                 env.ApplicationConfiguration.Add(source, AppConfig.GetAllValues(source));
             }
 
-#if !DNXCORE50
+#if !NETCOREAPP1_0
             env.CommandLine = Environment.CommandLine.Replace("\\", "\\\\");
 #endif
             return env;

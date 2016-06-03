@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Dotnet.Microservice.Health;
 using Dotnet.Microservice.Logging;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.PlatformAbstractions;
 
-#if DNXCORE50
+#if NETCOREAPP1_0
 using System.Reflection;
-#endif 
+#endif
 
 namespace Dotnet.Microservice.Dnx.Sample
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env, IApplicationEnvironment appenv)
+        public Startup(IHostingEnvironment env)
         {
             _env = env;
-            _appenv = appenv;
         }
 
         private IHostingEnvironment _env;
-        private IApplicationEnvironment _appenv;
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -41,8 +39,8 @@ namespace Dotnet.Microservice.Dnx.Sample
             // Build an IConfiguration instance using the ConfigurationBuilder as normal
             Dictionary<string, string> collection = new Dictionary<string, string>() { { "key1", "value1" }, { "key2", "value2" } };
             var config1 = new ConfigurationBuilder().AddInMemoryCollection(collection).Build();
-            var config2 = new ConfigurationBuilder().AddIniFile("hosting.ini").Build();
-            var config3 = new ConfigurationBuilder().AddJsonFile("config.json").Build();
+            var config2 = new ConfigurationBuilder().SetBasePath(_env.ContentRootPath).AddIniFile("hosting.ini").Build();
+            var config3 = new ConfigurationBuilder().SetBasePath(_env.ContentRootPath).AddJsonFile("config.json").Build();
 
             // AppConfig is a static class that groups together instances of IConfiguration and makes them available statically anywhere in the application
             AppConfig.AddConfigurationObject(config1, "memorySource");
@@ -97,7 +95,7 @@ namespace Dotnet.Microservice.Dnx.Sample
              */
 
             // Activate /info endpoint
-#if DNXCORE50
+#if NETCOREAPP1_0
             // Required for .NET Core until the relevant APIs are added
             app.UseInfoEndpoint(typeof(Startup).GetTypeInfo().Assembly.GetName());
 #else
@@ -112,7 +110,16 @@ namespace Dotnet.Microservice.Dnx.Sample
         }
 
         // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
+        public static void Main(string[] args)
+        {
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
+        }
 
     }
 

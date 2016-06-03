@@ -2,12 +2,12 @@
   "version": "1.0.0",
   "description": "Dotnet.Microservice.Owin.Sample Console Application",
 
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
-    "Dotnet.Microservice.Owin": "",
+    "Dotnet.Microservice.Owin": "1.0.2",
     "Microsoft.Extensions.Configuration.Ini": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
     "Microsoft.Owin.Hosting": "3.0.1",
@@ -19,7 +19,6 @@
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnx46": { }
+    "net46": { }
   }
 }

@@ -1,22 +1,21 @@
 ﻿{
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OWIN Self-host / IIS (Helios) support for the Dotnet Microservice library",
   "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
-  "tags": [ "api", "microservice", "vitals", "health check", "owin" ],
-  "projectUrl": "https://github.com/lynxx131/dotnet.microservice",
-  "licenseUrl": "https://github.com/lynxx131/dotnet.microservice/blob/master/LICENSE",
+  "packOptions": {
+    "tags": [ "api", "microservice", "vitals", "health check", "owin" ],
+    "projectUrl": "https://github.com/lynxx131/dotnet.microservice",
+    "licenseUrl": "https://github.com/lynxx131/dotnet.microservice/blob/master/LICENSE"
+  },
   "title": "Dotnet Microservice OWIN",
 
   "dependencies": {
-    "Dotnet.Microservice": "",
+    "Dotnet.Microservice": "1.0.2",
     "Microsoft.Owin": "3.0.1",
     "Owin": "1.0.0"
   },
 
   "frameworks": {
-    "net451": { },
-    "dnx451": { },
-    "net46": { },
-    "dnx46": { }
+    "net46": { }
   }
 }
