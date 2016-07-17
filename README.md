@@ -4,12 +4,11 @@ A library containing a small set of classes for adding actuator style endpoints 
 
 Code is licensed under the ISC license to use as you wish.
 
+**NOTE:** The current version of this package is no longer being developed. A version 2.0 of the core Dotnet.Microservice packge is on its way with major changes.
+
 ## Installation
 
 Run the following from the package manager console to install the package
-
-NOTE: The pre-release (-pre) flag is currently required for Non-DNX projects as the core Dotnet.Microservice package pulls in Microsoft.Extensions.Configuration which is 
-still an RC so without the pre-release flag you will get a dependency resolution failure for Microsoft.Extensions.Configuration.
 
 ### ASP.NET Core 1.0
 
@@ -20,7 +19,7 @@ PM> Install-Package Dotnet.Microservice.Dnx
 ### For OWIN
 
 ```
-PM> Install-Package Dotnet.Microservice.Owin -pre
+PM> Install-Package Dotnet.Microservice.Owin
 ```
 
 ## Documentation
