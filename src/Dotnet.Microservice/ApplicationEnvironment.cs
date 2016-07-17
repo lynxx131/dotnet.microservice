@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
-using System.Runtime.InteropServices;
 
-#if DNXCORE50
+#if NETSTANDARD1_6
 using System.Runtime.InteropServices;
 #endif
 
@@ -39,7 +38,7 @@ namespace Dotnet.Microservice
             env.ProcessStartTime = Process.GetCurrentProcess().StartTime;
             env.Hostname = Dns.GetHostName();
 
-#if NETCOREAPP1_0
+#if NETSTANDARD1_6
             // Allow OS detection on .NET Core
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
@@ -78,11 +77,11 @@ namespace Dotnet.Microservice
 #endif
 
             // Framework detection
-            #if DNXCORE50
+#if NETSTANDARD1_6
                 // Use compiler target detection for CoreCLR
                 env.Framework = "CoreCLR";
-            #else
-                env.Framework = Type.GetType("Mono.Runtime") != null ? "Mono" : ".NET Framework";
+#else
+            env.Framework = Type.GetType("Mono.Runtime") != null ? "Mono" : ".NET Framework";
 #endif
 
             if (includeEnvVars)
@@ -105,7 +104,7 @@ namespace Dotnet.Microservice
                 env.ApplicationConfiguration.Add(source, AppConfig.GetAllValues(source));
             }
 
-#if !NETCOREAPP1_0
+#if !NETSTANDARD1_6
             env.CommandLine = Environment.CommandLine.Replace("\\", "\\\\");
 #endif
             return env;
