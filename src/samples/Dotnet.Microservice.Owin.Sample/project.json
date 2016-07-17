@@ -7,9 +7,9 @@
   },
 
   "dependencies": {
-    "Dotnet.Microservice.Owin": "1.0.2",
-    "Microsoft.Extensions.Configuration.Ini": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
+    "Dotnet.Microservice.Owin": "1.0.3",
+    "Microsoft.Extensions.Configuration.Ini": "1.0.0",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0",
     "Microsoft.Owin.Hosting": "3.0.1",
     "Microsoft.Owin.Host.HttpListener": "3.0.1"
   },

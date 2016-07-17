@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A library for bootstrapping microservices with support for actuator style endpoints.",
   "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
   "packOptions": {
@@ -10,22 +10,18 @@
   "title": "Dotnet Microservice Core",
 
   "dependencies": {
-    "Newtonsoft.Json": "8.0.3",
-    "Microsoft.Extensions.Configuration": "1.0.0-rc2-final"
+    "Newtonsoft.Json": "9.0.1",
+    "Microsoft.Extensions.Configuration": "1.0.0"
   },
 
   "frameworks": {
-    "net46": { },
-    "netcoreapp1.0": {
+    "net46": {},
+    "netstandard1.6": {
       "imports": [
-        "dnxcore50",
-        "portable-net45+win8"
+        "dnxcore50"
       ],
       "dependencies": {
-        "NETStandard.Library": "1.5.0-rc2-24027",
-        "System.Diagnostics.Process": "4.1.0-rc2-24027",
-        "System.Net.NameResolution": "4.0.0-rc2-24027",
-        "System.Threading.Thread": "4.0.0-rc2-24027"
+        "NETStandard.Library": "1.6.0"
       }
     }
   }

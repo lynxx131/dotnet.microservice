@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ASP.NET Core support for the Dotnet Microservice library",
   "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
   "packOptions": {
@@ -10,16 +10,15 @@
   "title": "Dotnet Microservice NETCORE",
 
   "dependencies": {
-    "Dotnet.Microservice": "1.0.2",
-    "Microsoft.AspNetCore.Http.Abstractions": "1.0.0-rc2-final"
+    "Dotnet.Microservice": "1.0.3",
+    "Microsoft.AspNetCore.Http.Abstractions": "1.0.0"
   },
 
   "frameworks": {
     "net46": { },
     "netcoreapp1.0": {
       "imports": [
-        "dnxcore50",
-        "portable-net45+win8"
+        "dnxcore50"
       ]
     }
   }
