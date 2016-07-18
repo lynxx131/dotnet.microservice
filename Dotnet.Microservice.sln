@@ -17,6 +17,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{962987AB-630E-47B5-A9A8-E6D76CF95F29}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice.Starter.Owin", "src\Dotnet.Microservice.Starter.Owin\Dotnet.Microservice.Starter.Owin.xproj", "{D9010140-FD17-4109-A96C-73858934562C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice.Starter.Netcore", "src\Dotnet.Microservice.Starter.Netcore\Dotnet.Microservice.Starter.Netcore.xproj", "{60738563-A8D6-4EEC-9D28-70AA8784E19A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6A92775D-2033-4E0D-B26D-3368891509FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A92775D-2033-4E0D-B26D-3368891509FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A92775D-2033-4E0D-B26D-3368891509FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9010140-FD17-4109-A96C-73858934562C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9010140-FD17-4109-A96C-73858934562C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9010140-FD17-4109-A96C-73858934562C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9010140-FD17-4109-A96C-73858934562C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60738563-A8D6-4EEC-9D28-70AA8784E19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60738563-A8D6-4EEC-9D28-70AA8784E19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60738563-A8D6-4EEC-9D28-70AA8784E19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60738563-A8D6-4EEC-9D28-70AA8784E19A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6A92775D-2033-4E0D-B26D-3368891509FE} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
 		{962987AB-630E-47B5-A9A8-E6D76CF95F29} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
+		{D9010140-FD17-4109-A96C-73858934562C} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
+		{60738563-A8D6-4EEC-9D28-70AA8784E19A} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
 	EndGlobalSection
 EndGlobal

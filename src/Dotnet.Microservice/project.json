@@ -1,6 +1,6 @@
 ﻿{
-  "version": "1.0.3",
-  "description": "A library for bootstrapping microservices with support for actuator style endpoints.",
+  "version": "2.0.0-beta1",
+  "description": "A library that provides facilities to build microservices based on .NET Framework or .NET Core",
   "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
   "packOptions": {
     "tags": [ "api", "microservice", "vitals", "health check" ],
@@ -24,7 +24,7 @@
         "NETStandard.Library": "1.6.0",
         "System.Diagnostics.Process": "4.1.0",
         "System.Net.NameResolution": "4.0.0",
-        "System.Threading.Thread": "4.0.0" 
+        "System.Threading.Thread": "4.0.0"
       }
     }
   }

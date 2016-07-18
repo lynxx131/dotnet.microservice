@@ -1,0 +1,22 @@
+﻿{
+  "version": "2.0.0-beta1",
+  "description": ".NET Core based microservice starter for the Dotnet.Microservice library",
+  "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
+  "packOptions": {
+    "tags": [ "api", "microservice", "vitals", "health check" ],
+    "projectUrl": "https://github.com/lynxx131/dotnet.microservice",
+    "licenseUrl": "https://github.com/lynxx131/dotnet.microservice/blob/master/LICENSE"
+  },
+  "title": "Dotnet Microservice .NET Core starter",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Dotnet.Microservice": "2.0.0-beta1"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
