@@ -1,6 +1,0 @@
-﻿{
-  "key1": "value1",
-  "outerkey": {
-    "innerkey": "innervalue"
-  }
-}
