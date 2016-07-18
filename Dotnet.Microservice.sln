@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8820AE97-BB9E-4D6C-A238-B0B2F5921778}"
 EndProject
@@ -15,15 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice", "src\Dotnet.Microservice\Dotnet.Microservice.xproj", "{6A92775D-2033-4E0D-B26D-3368891509FE}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice.Owin", "src\Dotnet.Microservice.Owin\Dotnet.Microservice.Owin.xproj", "{B79E210C-E0B8-4203-919B-80FDEBEA0062}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice.Dnx", "src\Dotnet.Microservice.Dnx\Dotnet.Microservice.Dnx.xproj", "{C1BF7543-CC17-4F70-BA84-E3D4F914F599}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{962987AB-630E-47B5-A9A8-E6D76CF95F29}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice.Dnx.Sample", "src\samples\Dotnet.Microservice.Dnx.Sample\Dotnet.Microservice.Dnx.Sample.xproj", "{FA2B038F-3348-4447-8DC1-61C18AE33137}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dotnet.Microservice.Owin.Sample", "src\samples\Dotnet.Microservice.Owin.Sample\Dotnet.Microservice.Owin.Sample.xproj", "{BFB94AC2-5CF5-4C56-B802-FB5700911CAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,32 +27,12 @@ Global
 		{6A92775D-2033-4E0D-B26D-3368891509FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A92775D-2033-4E0D-B26D-3368891509FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A92775D-2033-4E0D-B26D-3368891509FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B79E210C-E0B8-4203-919B-80FDEBEA0062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B79E210C-E0B8-4203-919B-80FDEBEA0062}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B79E210C-E0B8-4203-919B-80FDEBEA0062}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B79E210C-E0B8-4203-919B-80FDEBEA0062}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1BF7543-CC17-4F70-BA84-E3D4F914F599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1BF7543-CC17-4F70-BA84-E3D4F914F599}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1BF7543-CC17-4F70-BA84-E3D4F914F599}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1BF7543-CC17-4F70-BA84-E3D4F914F599}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA2B038F-3348-4447-8DC1-61C18AE33137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA2B038F-3348-4447-8DC1-61C18AE33137}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA2B038F-3348-4447-8DC1-61C18AE33137}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA2B038F-3348-4447-8DC1-61C18AE33137}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFB94AC2-5CF5-4C56-B802-FB5700911CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFB94AC2-5CF5-4C56-B802-FB5700911CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFB94AC2-5CF5-4C56-B802-FB5700911CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFB94AC2-5CF5-4C56-B802-FB5700911CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6A92775D-2033-4E0D-B26D-3368891509FE} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
-		{B79E210C-E0B8-4203-919B-80FDEBEA0062} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
-		{C1BF7543-CC17-4F70-BA84-E3D4F914F599} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
 		{962987AB-630E-47B5-A9A8-E6D76CF95F29} = {8820AE97-BB9E-4D6C-A238-B0B2F5921778}
-		{FA2B038F-3348-4447-8DC1-61C18AE33137} = {962987AB-630E-47B5-A9A8-E6D76CF95F29}
-		{BFB94AC2-5CF5-4C56-B802-FB5700911CAF} = {962987AB-630E-47B5-A9A8-E6D76CF95F29}
 	EndGlobalSection
 EndGlobal
