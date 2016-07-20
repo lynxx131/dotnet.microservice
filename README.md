@@ -4,8 +4,6 @@ A library containing a small set of classes for adding actuator style endpoints 
 
 Code is licensed under the ISC license to use as you wish.
 
-**NOTE:** The current version of this package is no longer being developed. A version 2.0 of the core Dotnet.Microservice packge is on its way with major changes.
-
 ## Installation
 
 Run the following from the package manager console to install the package
