@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Dotnet.Microservice.Health;
 using Dotnet.Microservice.Logging;
 using Microsoft.AspNetCore.Builder;
@@ -8,11 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-#if NETCOREAPP1_0
-using System.Reflection;
-#endif
-
-namespace Dotnet.Microservice.Dnx.Sample
+namespace Dotnet.Microservice.Netcore.Sample
 {
     public class Startup
     {

@@ -7,7 +7,7 @@
     "projectUrl": "https://github.com/lynxx131/dotnet.microservice",
     "licenseUrl": "https://github.com/lynxx131/dotnet.microservice/blob/master/LICENSE"
   },
-  "title": "Dotnet Microservice NETCORE",
+  "title": "Dotnet Microservice Netcore",
 
   "dependencies": {
     "Dotnet.Microservice": "1.0.3",
@@ -16,7 +16,7 @@
 
   "frameworks": {
     "net46": { },
-    "netcoreapp1.0": {
+    "netstandard1.6": {
       "imports": [
         "dnxcore50"
       ]

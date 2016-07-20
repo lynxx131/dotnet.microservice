@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using Dotnet.Microservice.Health;
-using Newtonsoft.Json;
 using Microsoft.AspNetCore.Builder;
+using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 
-namespace Dotnet.Microservice.Dnx
+namespace Dotnet.Microservice.Netcore
 {
-    public static class DnxMiddlewareHandler
+    public static class NetcoreMiddlewareHandler
     {
         public static void UseHealthEndpoint(this IApplicationBuilder app)
         {
@@ -72,7 +72,7 @@ namespace Dotnet.Microservice.Dnx
         }
 
         // For DNX running on the full CLR we can use the GetExecutingAssembly() method to get our entry assembly
-#if !NETCOREAPP1_0
+#if !NETSTANDARD1_6
         public static void UseInfoEndpoint(this IApplicationBuilder app)
         {
             Assembly entryAssembly = Assembly.GetCallingAssembly();
