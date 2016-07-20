@@ -11,7 +11,7 @@ Run the following from the package manager console to install the package
 ### ASP.NET Core 1.0
 
 ```
-PM> Install-Package Dotnet.Microservice.Dnx
+PM> Install-Package Dotnet.Microservice.Netcore
 ```
 
 ### For OWIN
