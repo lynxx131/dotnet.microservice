@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Dotnet.Microservice.Health;
+using Dotnet.Microservice.Health.Checks;
 using Dotnet.Microservice.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -58,6 +59,14 @@ namespace Dotnet.Microservice.Netcore.Sample
             HealthCheckRegistry.RegisterHealthCheck("MyCustomMonitor", () => HealthResponse.Healthy("Test Message"));
             HealthCheckRegistry.RegisterHealthCheck("MyCustomMonitor2", () => HealthResponse.Healthy("Test Message2"));
             HealthCheckRegistry.RegisterHealthCheck("SampleOperation", () => SampleHealthCheckOperation());
+
+            /*
+             *   Some bundled health checks that can be used 
+             */
+            // Redis health check (Requires StackExchange.Redis)
+            //HealthCheckRegistry.RegisterHealthCheck("Redis", () => RedisHealthCheck.CheckHealth("192.168.153.51"));
+            // PostgreSQL health check (Requires Npgsql)
+            //HealthCheckRegistry.RegisterHealthCheck("Postgresql", () => PostgresqlHealthCheck.CheckHealth("Host=192.168.153.52;Username=cerberus;Password=nds131;Database=cerberus_intel"));
 
             /*
                 Uncomment the below line to only allow access to the actuator endpoints from localhost

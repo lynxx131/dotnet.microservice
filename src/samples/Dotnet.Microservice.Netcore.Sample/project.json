@@ -18,13 +18,16 @@
 
   "dependencies": {
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
-    "Dotnet.Microservice.Netcore": "1.0.3" ,
+    "Dotnet.Microservice.Netcore": "1.0.3",
     "Microsoft.Extensions.Configuration.Ini": "1.0.0",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0"
+    "Microsoft.Extensions.Configuration.Json": "1.0.0",
+    "Npgsql": "3.1.6",
+    "StackExchange.Redis": "1.1.604-alpha"
   },
 
   "frameworks": {
-    "net46": {},
+    "net46": {
+    },
     "netcoreapp1.0": {
       "dependencies": {
         "Microsoft.NETCore.App": {

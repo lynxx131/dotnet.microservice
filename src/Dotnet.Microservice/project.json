@@ -11,11 +11,23 @@
 
   "dependencies": {
     "Newtonsoft.Json": "9.0.1",
-    "Microsoft.Extensions.Configuration": "1.0.0"
+    "Microsoft.Extensions.Configuration": "1.0.0",
+    "StackExchange.Redis": {
+      "version": "1.1.604-alpha",
+      "type": "build"
+    },
+    "Npgsql": {
+      "version": "3.1.6",
+      "type": "build"
+    }
   },
 
   "frameworks": {
-    "net46": {},
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Data": "" 
+      }
+    },
     "netstandard1.6": {
       "imports": [
         "dnxcore50"
