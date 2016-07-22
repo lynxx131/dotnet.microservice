@@ -8,12 +8,12 @@ namespace Dotnet.Microservice.Health
     public struct HealthResponse
     {
         public readonly bool IsHealthy;
-        public readonly string Message;
+        public readonly object Response;
 
-        private HealthResponse(bool isHealthy, string statusMessage)
+        private HealthResponse(bool isHealthy, object statusObject)
         {
             IsHealthy = isHealthy;
-            Message = statusMessage;
+            Response = statusObject;
         }
 
         public static HealthResponse Healthy()
@@ -21,9 +21,9 @@ namespace Dotnet.Microservice.Health
             return Healthy("OK");
         }
 
-        public static HealthResponse Healthy(string message)
+        public static HealthResponse Healthy(object response)
         {
-            return new HealthResponse(true, message);
+            return new HealthResponse(true, response);
         }
 
         public static HealthResponse Unhealthy()
@@ -31,9 +31,9 @@ namespace Dotnet.Microservice.Health
             return Unhealthy("FAILED");
         }
 
-        public static HealthResponse Unhealthy(string message)
+        public static HealthResponse Unhealthy(object response)
         {
-            return new HealthResponse(false, message);
+            return new HealthResponse(false, response);
         }
 
         public static HealthResponse Unhealthy(Exception exception)
