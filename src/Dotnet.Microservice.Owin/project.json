@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "OWIN Self-host / IIS (Helios) support for the Dotnet Microservice library",
   "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
   "packOptions": {
@@ -10,12 +10,12 @@
   "title": "Dotnet Microservice OWIN",
 
   "dependencies": {
-    "Dotnet.Microservice": "1.0.3",
+    "Dotnet.Microservice": "1.1.0",
     "Microsoft.Owin": "3.0.1",
     "Owin": "1.0.0"
   },
 
   "frameworks": {
-    "net46": { }
+    "net46": {}
   }
 }
