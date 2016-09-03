@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Dotnet.Microservice.Health;
+using Dotnet.Microservice.Health.Checks;
 using Dotnet.Microservice.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Owin.Hosting;
@@ -55,6 +56,8 @@ namespace Dotnet.Microservice.Owin.Sample
             //HealthCheckRegistry.RegisterHealthCheck("Redis", () => RedisHealthCheck.CheckHealth("localhost"));
             // PostgreSQL health check (Requires Npgsql)
             //HealthCheckRegistry.RegisterHealthCheck("Postgresql", () => PostgresqlHealthCheck.CheckHealth("Host=localhost;Username=postgres;Password=postgres;Database=postgres"));
+            // SQL Server health check (Requires System.Data.SqlClient)
+            //HealthCheckRegistry.RegisterHealthCheck("SqlServer", () => SqlServerCheck.CheckHealth("Server=localhost;Database=master;User Id=sa;Password=password; "));
 
             /*
              *   Health checks are simply functions that return either healthy or unhealthy with an optional message string

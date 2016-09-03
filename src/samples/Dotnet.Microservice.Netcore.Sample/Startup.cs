@@ -64,9 +64,11 @@ namespace Dotnet.Microservice.Netcore.Sample
              *   Some bundled health checks that can be used 
              */
             // Redis health check (Requires StackExchange.Redis)
-            //HealthCheckRegistry.RegisterHealthCheck("Redis", () => RedisHealthCheck.CheckHealth("192.168.153.51"));
+            //HealthCheckRegistry.RegisterHealthCheck("Redis", () => RedisHealthCheck.CheckHealth("localhost"));
             // PostgreSQL health check (Requires Npgsql)
-            //HealthCheckRegistry.RegisterHealthCheck("Postgresql", () => PostgresqlHealthCheck.CheckHealth("Host=192.168.153.52;Username=cerberus;Password=nds131;Database=cerberus_intel"));
+            //HealthCheckRegistry.RegisterHealthCheck("Postgresql", () => PostgresqlHealthCheck.CheckHealth("Host=localhost;Username=postgres;Password=postgres;Database=postgres"));
+            // SQL Server health check (Requires System.Data.SqlClient)
+            //HealthCheckRegistry.RegisterHealthCheck("SqlServer", () => SqlServerCheck.CheckHealth("Server=localhost;Database=master;User Id=sa;Password=password; "));
 
             /*
                 Uncomment the below line to only allow access to the actuator endpoints from localhost
