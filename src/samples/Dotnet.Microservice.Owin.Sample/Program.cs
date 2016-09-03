@@ -51,6 +51,11 @@ namespace Dotnet.Microservice.Owin.Sample
             AppConfig.Set("jsonSource", "config:setting", "http://localhost:5001");
             Console.WriteLine("Modified config:setting key in jsonSource: " + AppConfig.Get("jsonSource", "config:setting"));
 
+            // Redis health check (Requires StackExchange.Redis)
+            //HealthCheckRegistry.RegisterHealthCheck("Redis", () => RedisHealthCheck.CheckHealth("localhost"));
+            // PostgreSQL health check (Requires Npgsql)
+            //HealthCheckRegistry.RegisterHealthCheck("Postgresql", () => PostgresqlHealthCheck.CheckHealth("Host=localhost;Username=postgres;Password=postgres;Database=postgres"));
+
             /*
              *   Health checks are simply functions that return either healthy or unhealthy with an optional message string
              */
