@@ -17,8 +17,12 @@ namespace Dotnet.Microservice.Health.Checks
                     DefaultDatabase = parser.ConnectionStringOptions.DefaultDatabase
                 };
                 store.Initialize();
+                // Client doesn't seem to throw an exception until we try to do something so let's just do something simple and get the build number of the server.
+                var build = store.DatabaseCommands.GlobalAdmin.GetBuildNumber();
+                // Dispose the store object
+                store.Dispose();
                 
-                return HealthResponse.Healthy(new { server = store.Url, database = store.DefaultDatabase });
+                return HealthResponse.Healthy(new { server = store.Url, database = store.DefaultDatabase, serverBuild = build.BuildVersion });
             }
             catch (Exception ex)
             {
