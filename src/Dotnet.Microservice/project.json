@@ -19,7 +19,8 @@
     "Npgsql": {
       "version": "3.1.6",
       "type": "build"
-    }
+    },
+    "RavenDB.Client":  "3.5.1"
   },
 
   "frameworks": {
