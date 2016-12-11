@@ -70,7 +70,7 @@ namespace Dotnet.Microservice.Netcore.Sample
             // SQL Server health check (Requires System.Data.SqlClient)
             //HealthCheckRegistry.RegisterHealthCheck("SqlServer", () => SqlServerCheck.CheckHealth("Server=localhost;Database=master;User Id=sa;Password=password; "));
             // RavenDB health check 
-            // HealthCheckRegistry.RegisterHealthCheck("ravendb", () => RavenDbHealthCheck.CheckHealth("Url=http://localhost:8081;DefaultDatabase=system"));
+            //HealthCheckRegistry.RegisterHealthCheck("ravendb", () => RavenDbHealthCheck.CheckHealth("Url=http://192.168.153.55:8080;DefaultDatabase=<system>"));
             /*
                 Uncomment the below line to only allow access to the actuator endpoints from localhost
 
