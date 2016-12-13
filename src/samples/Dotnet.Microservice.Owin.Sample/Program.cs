@@ -38,7 +38,7 @@ namespace Dotnet.Microservice.Owin.Sample
             // Build an IConfiguration instance using the ConfigurationBuilder as normal
             Dictionary<string, string> collection = new Dictionary<string, string>() { { "key1", "value1" }, { "key2", "value2" } };
             var config1 = new ConfigurationBuilder().AddInMemoryCollection(collection).Build();
-            var config3 = new ConfigurationBuilder().AddJsonFile("config.json").Build();
+            var config3 = new ConfigurationBuilder().AddJsonFile("Config.json").Build();
 
             // AppConfig is a static class that groups together instances of IConfiguration and makes them available statically anywhere in the application
             AppConfig.AddConfigurationObject(config1, "memorySource");
@@ -58,7 +58,7 @@ namespace Dotnet.Microservice.Owin.Sample
             //HealthCheckRegistry.RegisterHealthCheck("Postgresql", () => PostgresqlHealthCheck.CheckHealth("Host=localhost;Username=postgres;Password=postgres;Database=postgres"));
             // SQL Server health check (Requires System.Data.SqlClient)
             //HealthCheckRegistry.RegisterHealthCheck("SqlServer", () => SqlServerCheck.CheckHealth("Server=localhost;Database=master;User Id=sa;Password=password; "));
-
+             // HealthCheckRegistry.RegisterHealthCheck("mongodb", () => MongoHealthCheck.CheckHealth("mongodb://localhost:27017"));
             /*
              *   Health checks are simply functions that return either healthy or unhealthy with an optional message string
              */

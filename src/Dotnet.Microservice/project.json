@@ -20,7 +20,8 @@
       "version": "3.1.6",
       "type": "build"
     },
-    "RavenDB.Client":  "3.5.1"
+    "RavenDB.Client": "3.5.1",
+    "mongocsharpdriver": "2.4.0"
   },
 
   "frameworks": {
