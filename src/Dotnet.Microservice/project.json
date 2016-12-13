@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A library for bootstrapping microservices with support for actuator style endpoints.",
   "authors": [ "Lynxx131 <lynxx131@outlook.com>" ],
   "packOptions": {
@@ -20,8 +20,14 @@
       "version": "3.1.6",
       "type": "build"
     },
-    "RavenDB.Client": "3.5.1",
-    "mongocsharpdriver": "2.4.0"
+    "RavenDB.Client": {
+      "version": "3.5.1",
+      "type": "build"
+    },
+    "mongocsharpdriver": {
+      "version": "2.4.0",
+      "type": "build"
+    }
   },
 
   "frameworks": {
