@@ -23,6 +23,10 @@
     "RavenDB.Client": {
       "version": "3.5.1",
       "type": "build"
+    },
+    "mongocsharpdriver": {
+      "version": "2.4.0",
+      "type": "build"
     }
   },
 
