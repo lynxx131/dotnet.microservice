@@ -15,6 +15,7 @@ namespace Dotnet.Microservice.Health.Checks
             try
             {
                 NpgsqlConnection conn = new NpgsqlConnection(connectionString);
+                NpgsqlConnection.ClearPool(conn);
                 conn.Open();
                 string host = conn.Host;
                 string version = conn.PostgreSqlVersion.ToString();
