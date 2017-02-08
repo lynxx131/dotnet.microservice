@@ -10,7 +10,7 @@
   "title": "Dotnet Microservice Netcore",
 
   "dependencies": {
-    "Dotnet.Microservice": "1.1.3",
+    "Dotnet.Microservice": "1.1.4",
     "Microsoft.AspNetCore.Http.Abstractions": "1.0.0"
   },
 
