@@ -3,6 +3,7 @@ using Dotnet.Microservice.Health;
 using Microsoft.AspNetCore.Builder;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 
 namespace Dotnet.Microservice.Netcore
 {
@@ -15,7 +16,7 @@ namespace Dotnet.Microservice.Netcore
                 if (context.Request.Path.Value.Equals("/health"))
                 {
                     // Perform IP access check
-                    if(MicroserviceConfiguration.AllowedIpAddresses != null && context.Request.HttpContext.Connection.RemoteIpAddress != null)
+                    if (MicroserviceConfiguration.AllowedIpAddresses != null && context.Request.HttpContext.Connection.RemoteIpAddress != null)
                     {
                         if (!MicroserviceConfiguration.AllowedIpAddresses.Contains(context.Request.HttpContext.Connection.RemoteIpAddress))
                         {
@@ -24,7 +25,7 @@ namespace Dotnet.Microservice.Netcore
                         }
                     }
 
-                    HealthCheckRegistry.HealthStatus status = HealthCheckRegistry.GetStatus();
+                    HealthCheckRegistry.HealthStatus status = await Task.Run(() => HealthCheckRegistry.GetStatus());
 
                     if (!status.IsHealthy)
                     {
@@ -62,7 +63,7 @@ namespace Dotnet.Microservice.Netcore
                     ApplicationEnvironment env = ApplicationEnvironment.GetApplicationEnvironment(includeEnvVars);
 
                     context.Response.Headers["Content-Type"] = "application/json";
-                    await context.Response.WriteAsync(JsonConvert.SerializeObject(env, new JsonSerializerSettings() { StringEscapeHandling = StringEscapeHandling.EscapeNonAscii}));
+                    await context.Response.WriteAsync(JsonConvert.SerializeObject(env, new JsonSerializerSettings() { StringEscapeHandling = StringEscapeHandling.EscapeNonAscii }));
                 }
                 else
                 {
