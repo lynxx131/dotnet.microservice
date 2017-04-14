@@ -9,7 +9,7 @@
   "dependencies": {
     "Nowin": "0.22.2",
     "Owin.Routing": "0.8.0",
-    "Dotnet.Microservice": ""
+    "Dotnet.Microservice": "1.1.4.1"
   },
   
   "frameworks": {
